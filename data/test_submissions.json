@@ -1,0 +1,139 @@
+{
+  "test_cases": [
+    {
+      "test_id": "TC001",
+      "description": "Missing unit ID on numeric field (weight)",
+      "expected_classification": "USER_ERROR",
+      "submission": {
+        "batch_id": 1,
+        "user_id": "2739",
+        "external_system_id": "FL",
+        "member_id": "FLO202759913501",
+        "completion_date": "2026-06-09T03:33:58",
+        "version": 33,
+        "id": 922,
+        "QUESTIONS": [
+          {"id": 395, "value": "20"}
+        ]
+      },
+      "known_error": "Incorrect format. Unit ID must be present for a concept that is of type 4 (i.e., numeric with units). Use the format [ConceptValue]::[UnitId] (ex. 217::505)"
+    },
+    {
+      "test_id": "TC002",
+      "description": "Multiple empty required fields causing format exception",
+      "expected_classification": "USER_ERROR",
+      "submission": {
+        "batch_id": 1,
+        "user_id": "2739",
+        "external_system_id": "FL",
+        "member_id": "FLO152628468603",
+        "completion_date": "2026-06-15T23:19:18",
+        "version": 1,
+        "id": 932,
+        "QUESTIONS": [
+          {"id": 7, "value": ""},
+          {"id": 8, "value": ""},
+          {"id": 9, "value": ""},
+          {"id": 48, "value": "9"}
+        ]
+      },
+      "known_error": "System.FormatException: Input string was not in a correct format"
+    },
+    {
+      "test_id": "TC003",
+      "description": "Database timeout - system level issue, not data related",
+      "expected_classification": "SYSTEM_ISSUE",
+      "submission": {
+        "batch_id": 1,
+        "user_id": "2739",
+        "external_system_id": "TX",
+        "member_id": "MBR252749596845",
+        "completion_date": "2026-03-25T18:12:12",
+        "version": 5,
+        "id": 1437,
+        "QUESTIONS": [
+          {"id": 1, "value": "HORALIA"},
+          {"id": 342, "value": "5.2::366"},
+          {"id": 344, "value": "202::506"}
+        ]
+      },
+      "known_error": "DBTimeoutException: Execution Timeout Expired"
+    },
+    {
+      "test_id": "TC004",
+      "description": "Invalid session - care manager session expired",
+      "expected_classification": "SYSTEM_ISSUE",
+      "submission": {
+        "batch_id": 1,
+        "user_id": "2739",
+        "external_system_id": "TX",
+        "member_id": "MBR220014559288",
+        "completion_date": "2026-06-02T21:05:40",
+        "version": 14,
+        "id": 696,
+        "QUESTIONS": [
+          {"id": 1, "value": "Initial assessment"},
+          {"id": 2, "value": "MARDIE"}
+        ]
+      },
+      "known_error": "Invalid Session"
+    },
+    {
+      "test_id": "TC005",
+      "description": "Answer count exceeds template question count",
+      "expected_classification": "TEMPLATE_ISSUE",
+      "submission": {
+        "batch_id": 1,
+        "user_id": "2739",
+        "external_system_id": "UNV3",
+        "member_id": "IAM23152166475",
+        "completion_date": "2026-04-20T05:34:56",
+        "version": 3,
+        "id": 500711,
+        "answer_count": 122,
+        "template_question_count": 120,
+        "QUESTIONS": [
+          {"id": 1, "value": "In-Person"},
+          {"id": 4, "value": "Annual / Reassessment"}
+        ]
+      },
+      "known_error": "Too many answers. Answer count: 122. Template Question count: 120."
+    },
+    {
+      "test_id": "TC006",
+      "description": "Invalid question ID not present in template",
+      "expected_classification": "TEMPLATE_ISSUE",
+      "submission": {
+        "batch_id": 1,
+        "user_id": "2739",
+        "external_system_id": "TX",
+        "member_id": "MBR3350030500",
+        "completion_date": "2026-03-24T14:49:08",
+        "version": 3,
+        "id": 677,
+        "QUESTIONS": [
+          {"id": 263, "value": "ww"}
+        ]
+      },
+      "known_error": "Invalid Question Id: 263. TemplateID: 677. Version: 3"
+    },
+    {
+      "test_id": "TC007",
+      "description": "Whitespace submitted instead of valid numeric value",
+      "expected_classification": "USER_ERROR",
+      "submission": {
+        "batch_id": 1,
+        "user_id": "2739",
+        "external_system_id": "TX",
+        "member_id": "TXM15351598115",
+        "completion_date": "2025-09-14T09:53:37",
+        "version": 23,
+        "id": 696,
+        "QUESTIONS": [
+          {"id": 672, "value": " "}
+        ]
+      },
+      "known_error": "Incorrect format or the value is not of a numeric value. This concept is of type 3 (i.e., numeric). Invalid Question Id: 672."
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+[
+  {
+    "submission_id": "TC001",
+    "member_id": "FLO202759913501",
+    "template_id": 922,
+    "version": 33,
+    "status": "auto_corrected",
+    "classification": "USER_ERROR",
+    "issues": [
+      {
+        "question_id": 395,
+        "issue_type": "missing_unit_id",
+        "original_value": "20",
+        "description": "Numeric field requires [value]::[unitId] format"
+      }
+    ],
+    "corrected_data": {
+      "395": "20::505"
+    },
+    "auto_fixed": [
+      395
+    ],
+    "needs_review": [],
+    "escalation": {
+      "required": false,
+      "route_to": null
+    },
+    "original_cca_error": "Incorrect format. Unit ID must be present for a concept that is of type 4 (i.e., numeric with units). Use the format [ConceptValue]::[UnitId] (ex. 217::505)"
+  },
+  {
+    "submission_id": "TC002",
+    "member_id": "FLO152628468603",
+    "template_id": 932,
+    "version": 1,
+    "status": "needs_review",
+    "classification": "USER_ERROR",
+    "issues": [
+      {
+        "question_id": 7,
+        "issue_type": "missing_mandatory_field",
+        "original_value": "",
+        "description": "Required field submitted empty"
+      },
+      {
+        "question_id": 8,
+        "issue_type": "missing_mandatory_field",
+        "original_value": "",
+        "description": "Required field submitted empty"
+      },
+      {
+        "question_id": 9,
+        "issue_type": "missing_mandatory_field",
+        "original_value": "",
+        "description": "Required field submitted empty"
+      }
+    ],
+    "corrected_data": {},
+    "auto_fixed": [],
+    "needs_review": [
+      {
+        "question_id": 7,
+        "suggestion": "Please ensure that the mandatory field for Question ID 7 is completed with the appropriate information, as it is required for a complete assessment submission and cannot be left blank."
+      },
+      {
+        "question_id": 8,
+        "suggestion": "Please ensure that the mandatory field for Question ID 8 is completed with the appropriate information, as it is required for a complete and accurate assessment submission."
+      },
+      {
+        "question_id": 9,
+        "suggestion": "Please ensure that the mandatory field for Question ID 9 is completed with the appropriate information, as it is required to proceed with the assessment and cannot be left blank."
+      }
+    ],
+    "escalation": {
+      "required": false,
+      "route_to": null
+    },
+    "original_cca_error": "System.FormatException: Input string was not in a correct format"
+  },
+  {
+    "submission_id": "TC003",
+    "member_id": "MBR252749596845",
+    "template_id": 1437,
+    "version": 5,
+    "status": "escalated",
+    "classification": "SYSTEM_ISSUE",
+    "issues": [],
+    "corrected_data": {},
+    "auto_fixed": [],
+    "needs_review": [],
+    "escalation": {
+      "required": true,
+      "route_to": "Infrastructure/DBA Team"
+    },
+    "original_cca_error": "DBTimeoutException: Execution Timeout Expired"
+  },
+  {
+    "submission_id": "TC004",
+    "member_id": "MBR220014559288",
+    "template_id": 696,
+    "version": 14,
+    "status": "escalated",
+    "classification": "SYSTEM_ISSUE",
+    "issues": [],
+    "corrected_data": {},
+    "auto_fixed": [],
+    "needs_review": [],
+    "escalation": {
+      "required": true,
+      "route_to": "Infrastructure/DBA Team"
+    },
+    "original_cca_error": "Invalid Session"
+  },
+  {
+    "submission_id": "TC005",
+    "member_id": "IAM23152166475",
+    "template_id": 500711,
+    "version": 3,
+    "status": "escalated",
+    "classification": "TEMPLATE_ISSUE",
+    "issues": [],
+    "corrected_data": {},
+    "auto_fixed": [],
+    "needs_review": [],
+    "escalation": {
+      "required": true,
+      "route_to": "Template/Development Team"
+    },
+    "original_cca_error": "Too many answers. Answer count: 122. Template Question count: 120."
+  },
+  {
+    "submission_id": "TC006",
+    "member_id": "MBR3350030500",
+    "template_id": 677,
+    "version": 3,
+    "status": "escalated",
+    "classification": "TEMPLATE_ISSUE",
+    "issues": [],
+    "corrected_data": {},
+    "auto_fixed": [],
+    "needs_review": [],
+    "escalation": {
+      "required": true,
+      "route_to": "Template/Development Team"
+    },
+    "original_cca_error": "Invalid Question Id: 263. TemplateID: 677. Version: 3"
+  },
+  {
+    "submission_id": "TC007",
+    "member_id": "TXM15351598115",
+    "template_id": 696,
+    "version": 23,
+    "status": "needs_review",
+    "classification": "USER_ERROR",
+    "issues": [
+      {
+        "question_id": 672,
+        "issue_type": "missing_mandatory_field",
+        "original_value": "",
+        "description": "Required field submitted empty"
+      }
+    ],
+    "corrected_data": {},
+    "auto_fixed": [],
+    "needs_review": [
+      {
+        "question_id": 672,
+        "suggestion": "Please ensure that the mandatory field for Question ID 672 is completed with the appropriate information, as it is required to accurately assess the member's health status and proceed with care planning."
+      }
+    ],
+    "escalation": {
+      "required": false,
+      "route_to": null
+    },
+    "original_cca_error": "Incorrect format or the value is not of a numeric value. This concept is of type 3 (i.e., numeric). Invalid Question Id: 672."
+  }
+]
